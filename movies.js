@@ -83,7 +83,6 @@ window.addEventListener("DOMContentLoaded", function () {
     var element = movies[i].category;
 
     var verification = categories.find(item => item === element);
-    //console.log(verification);
     if (verification == undefined) {
       categories.push(element);
     }
