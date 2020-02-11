@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: url('images/background.jpg');
+    background-size: 100% 100%;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(4, 17, 29, 0.911);
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 12px 2px rgba(255, 255, 255, 1);
+    /* font-family: 'Monoton', cursive; */
+    font-family: 'Cabin Sketch', cursive;
+}
+
+header h1 {
+    color: white;
+    font-size: 60px;
+    margin: 20px;
+}
+
+header h2 {
+    color: #DDB448;
+    padding: 0 20px;
+}
+
+
+
+/*navigation bar*/
+nav {
+    margin: auto;
+}
+
+.menu {
+    line-height: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    font-size: 35px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.item_page {
+    position: absolute;
+    right: 50px;
+    list-style: none;
+    font-size: 25px;
+    bottom: 10px;
+}
+
+.item_page a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+
+}
+
+.item {
+    position: absolute;
+    opacity: 0;
+    list-style: none;
+    right: 180px;
+    bottom: 0px;
+}
+
+.item_page li:hover .item {
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+/*menu cache*/
+.show-menu-btn,
+.hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 100px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color: #DDB448;
+}
+
+#check {
+    position: absolute;
+    visibility: hidden;
+    z-index: -10;
+}
+
+.main {
+    min-height: 70vh;
+    width: 95vw;
+    margin: auto;
+    background-color: rgba(4, 17, 29, 0.883);
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(173, 88, 39, 1);
+    -moz-box-shadow: 0px 0px 20px 3px rgba(173, 88, 39, 1);
+    box-shadow: 0px 0px 20px 3px rgba(173, 88, 39, 1);
+    position: relative;
+}
+
+.list_films {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 35px auto;
+
+}
+
+.description {
+    margin: auto;
+}
+
+.description h2 {
+    color: white;
+    padding: 20px;
+
+}
+
+.description p {
+    width: 400px;
+    color: white;
+    padding: 20px;
+}
+
+.carte {
+    background-color: rgba(246, 246, 246, 0.109);
+    margin: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 450px;
+    z-index: 0;
+}
+
+.title {
+    padding: 15px;
+    font-size: 28px;
+    color: aliceblue;
+    margin: 10px;
+    background-color: rgba(156, 156, 156, 0.294);
+}
+
+.img_film {
+    width: 170px;
+    height: 170px;
+    background-size: cover;
+}
+
+.div_btn {
+    margin: 30px;
+}
+
+.like {
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.dislike {
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.jauge_div {
+    position: relative;
+    width: 200px;
+    height: 10px;
+    margin: 10px auto;
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.jauge_progres {
+    height: 100%;
+    background-color: tomato;
+    transition-duration: 1s;
+    opacity: 1;
+}
+
+.para_jauge {
+    width: 200px;
+    height: 10px;
+    color: white;
+    opacity: 0;
+    position: absolute;
+    top: -70px;
+    letter-spacing: 10px;
+}
+
+.jauge_div:hover .para_jauge {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    border: 1px solid rgb(107, 99, 99);
+    padding: 14px 70px;
+    margin: 30px 0;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+
+.btn::before {
+    background: rgba(248, 57, 57, 0.411);
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.5s ease;
+
+}
+
+.delete_btn::before {
+    width: 0;
+    height: 100%;
+
+}
+
+.delete_btn:hover::before {
+    width: 100%;
+
+}
+
+.btnSuivant {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    color: white;
+    font-size: 100px;
+
+}
+
+.btnPrecedent {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 30px;
+    color: white;
+    font-size: 100px;
+}
+
+footer {
+    width: 96vw;
+    background-color: #44332967;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding: 20px;
+    margin: 30px auto 0 auto;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+
+@media screen and (max-width:800px) {
+
+    .description {
+        display: none;
+    }
+
+    #slider {
+        display: none;
+    }
+
+    .show-menu-btn,
+    .hide-menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        right: 100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 30px;
+    }
+
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+
+
+/*slider page principaler*/
+#slider {
+    width: 300px;
+    height: 500px;
+    margin: 5% auto;
+    overflow: hidden;
+}
+
+#slider article {
+    position: relative;
+    width: 500%;
+    margin: auto;
+    padding: 0;
+    text-align: left;
+    animation: 20s slidy infinite;
+}
+
+#slider article img {
+    width: 20%;
+    float: left;
+}
+
+
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
