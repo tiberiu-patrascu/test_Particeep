@@ -41,7 +41,7 @@ nav {
 }
 
 .menu {
-    line-height: 100px;
+    line-height: 10px;
     text-align: center;
     position: relative;
 }
@@ -49,16 +49,18 @@ nav {
 .menu li {
     display: inline-block;
     position: relative;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .menu a {
     color: #fff;
     text-decoration: none;
-    padding: 0 10px;
     transition: 0.4s;
+    padding: 10px;
 }
-
+.affiche_films{
+    
+}
 .item_page {
     position: absolute;
     list-style: none;
@@ -81,10 +83,12 @@ nav {
     position: absolute;
     opacity: 0;
     list-style: none;
-    right: 180px;
+    right: 160px;
     bottom: 0px;
 }
-
+.item a:hover{
+    color: #DDB448;
+}
 .item_page li:hover .item {
     display: flex;
     flex-direction: row;
@@ -224,7 +228,7 @@ nav {
     border-radius: 15px;
     text-align: center;
     width: 280px;
-    height: 430px;
+    height: 420px;
     z-index: 0;
 }
 
@@ -344,7 +348,6 @@ nav {
 }
 
 footer {
-
     background-color: #44332967;
     text-align: center;
     font-size: 25px;
@@ -414,7 +417,7 @@ footer {
     
     .menu a {
         display: block;
-        padding: 30px;
+        padding: 20px;
     }
 
     .hide-menu-btn {
