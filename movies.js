@@ -309,7 +309,6 @@ window.addEventListener("DOMContentLoaded", function () {
       });
 
 
-
     });
   }
 });
